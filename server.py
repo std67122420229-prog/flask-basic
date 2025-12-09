@@ -20,7 +20,7 @@ def home():
     </html>
 '''
 
-@app.route('/calulator/addition/<int:num1>/<int:num2>')
+@app.route('/calculator/addition/<int:num1>/<int:num2>')
 def addition(num1, num2):
   result = num1 + num2
   return f'''
