@@ -21,12 +21,12 @@ def home():
     </html>
 '''
 
-@app.route('/calculator/addition/<int:num1>/<int:num2>')
-def addition(num1, num2):
-  result = num1 + num2
-  return f'''
-  {num1} + {num2} = {result}  
-  ''' 
+# @app.route('/calculator/addition/<int:num1>/<int:num2>')
+# def addition(num1, num2):
+#   result = num1 + num2
+#   return f'''
+#   {num1} + {num2} = {result}  
+#   ''' 
 @app.route('/user/<username>')
 def user(username):
   return f'<h1> name is: {username} </h1>'
