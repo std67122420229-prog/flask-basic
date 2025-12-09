@@ -34,12 +34,12 @@ def user(username):
 @app.route('/calculator/addition/<int:num1>/<int:num2>')
 def addition(a, b):
   result = a + b
-  return f'<h1> {a} + {b} = {a+b} </h1>'
+  return f'<h1> {a} + {b} = {result} </h1>'
 
 @app.route('/calculator/division/<int:a>/<int:b>')
 def division(a, b):
-  result = a - b
-  return f'<h1> {a} / {b} = {a-b} </h1>'
+  result = a / b
+  return f'<h1> {a} / {b} = {result} </h1>'
 
 @app.route('/calculator/multiplication/<int:a>/<int:b>')
 def multiplication(a, b):
@@ -48,10 +48,10 @@ def multiplication(a, b):
 
 @app.route('/calculator/subtraction/<int:a>/<int:b>')
 def subtraction(a, b):
-  result = a / b
-  return f'<h1> {a} / {b} = {result} </h1>'
+  result = a - b
+  return f'<h1> {a} - {b} = {result} </h1>'
 
-@app.route('/secretkey/<uuid:sk')
+@app.route('/secretkey/<uuid:sk>')
 def My_secretkey(sk):
   return f'<h1> My secret key is: {sk} </h1>'
 
